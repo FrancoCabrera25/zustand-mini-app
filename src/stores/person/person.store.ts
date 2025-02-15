@@ -38,3 +38,7 @@ export const usePersonStore = create<PersonStore & Actions>()(
         )
     )
 );
+
+usePersonStore.subscribe((nextState, prevState) => {
+    console.log(nextState, prevState);
+});
